@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Hide Password</title>
+  <style>
+    .password 
+    {
+      display:inline-block ;
+      position: relative;
+      border: 1px solid #000;
+    }
+    .password input 
+    {
+      padding: 10px 5px;
+      outline: none;
+      border: 0;
+    }
+    .pass-icon 
+    {
+      position: absolute;
+      top: 3px;
+      width: 24px;
+      right: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  
+     
+
+
+     <div class="password">
+      <input type="password" placeholder="Enter Your password" id="password">
+      <img src="assets/hide.png" onclick="pass()" class="pass-icon" id="pass-icon">
+     </div>
+
+<script>
+
+let a;
+function pass()
+{
+  if(a==1)
+{
+    document.getElementById('password').type="password";
+    document.getElementById('pass-icon').src="assets/hide.png";
+    a=0;
+}
+else 
+{
+  document.getElementById('password').type="text";
+    document.getElementById('pass-icon').src="assets/show.png";
+    a=1;
+}
+}
+
+
+
+</script>
+</body>
+</html>
